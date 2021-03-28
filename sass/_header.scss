@@ -1,0 +1,221 @@
+.header {
+    background-color: $color-grey-dark-1;
+    grid-column: full-start / full-end 6;
+    background-image: linear-gradient($color-secondary, $color-secondary), url(../img/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+
+    &__btn {
+    align-self: start;
+    justify-self: start;
+    }
+
+    &__hero {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 8rem;
+    margin-top: 20vh;
+    margin-left: 5vw;
+    
+    @media only screen and (max-width: $bp-large) {
+      margin-top: 15vh;
+  }
+
+    & h1 {
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+    }
+    & h3 {
+      animation-name: moveInRight;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+    }
+    }
+}
+
+.navigation {
+    // background-color: $color-primary;
+    background-image: linear-gradient($color-primary, $color-primary), url(../img/mountain.jpg);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-position: center;
+  }
+
+  .nav-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+
+    &-label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 3rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+  }
+  
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 3px;
+    width: 32px;
+    border-radius: 2px;
+    position: relative;
+  }
+  
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+  }
+  
+  .nav-toggle-label span::before {
+    bottom: 12px;
+  }
+  
+  .nav-toggle-label span::after {
+    top: 12px;
+  }
+  
+  .nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+  }
+  
+  .nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+  }
+
+  nav {
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    // background-color: $color-primary;
+    background-image: linear-gradient($color-primary, $color-primary), url(../img/mountain.jpg);
+    background-position: center;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+
+
+    & ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    & li {
+      margin-bottom: 2.4rem;
+      margin-left: 1rem;
+
+      @media only screen and (max-width: $bp-large) {
+        padding-top: 3rem
+    }
+    }
+
+    & a {
+      color: white;
+      text-decoration: none;
+      font-size: 2rem;
+      text-transform: uppercase;
+      opacity: 0;
+      transition: opacity 150ms ease-in-out;
+    }
+    & a:hover {
+      color: rgb(218, 238, 238);
+    }
+  }
+  
+
+  
+  
+  @media screen and (min-width: 1000px) {
+    .nav-toggle-label {
+      display: none;
+    }
+  
+    .navigation {
+      display: grid;
+      grid-template-columns: 1fr auto minmax(70px, 3fr) ;
+      padding: 2rem 4rem 2rem 2rem;
+    }
+    
+    .header__logo {
+      position: absolute;
+      top: 1rem;
+      left: 2.4rem;
+    }
+    
+    nav {
+    /* Edge support */
+      position: relative;
+      text-align: left;
+      transition: none;
+      transform: scale(1,1);
+      background: none;
+      top: initial;
+      left: initial;
+      /* end Edge support  */
+      
+      grid-column: 3 / 4;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+
+      & ul {
+        display: flex;
+      }
+
+
+      & li {
+        margin-left: 6rem;
+        margin-bottom: 0;
+      }
+
+      & a {
+        opacity: 1;
+        position: relative;
+      }
+    }
+    
+    
+    
+    nav a::before {
+      content: '';
+      display: block;
+      height: 4px;
+      background: $color-tertiary;
+      position: absolute;
+      top: 1.5em;
+      left: 0;
+      right: 0;
+      transform: scale(0, 1);
+      transition: transform ease-in-out 450ms;
+    }
+    
+    nav a:hover::before {
+      transform: scale(1,1);
+    }
+  }
+  
+
+  /* Animations */
+
+.btn--animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
+} 
+
