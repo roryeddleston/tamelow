@@ -25,7 +25,8 @@ body {
   font-family: "Nunito", sans-serif;
   color: #3f3f3f;
   font-weight: 300;
-  line-height: 1.6; }
+  line-height: 1.6;
+  letter-spacing: .5px; }
 
 .container {
   display: grid;
@@ -42,6 +43,13 @@ body {
   @media only screen and (max-width: 62.5em) {
     .container-2 {
       grid-template-rows: minmax(80vh, min-content) min-content min-content min-content min-content min-content; } }
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem); }
+
+.section {
+  transition: transform 1s, opacity 1s; }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -232,7 +240,6 @@ body {
   opacity: 1; }
 
 .header {
-  background-color: #575757;
   grid-column: full-start / full-end 6;
   background-image: linear-gradient(rgba(53, 61, 75, 0.85), rgba(53, 61, 75, 0.85)), url(../img/hero.jpeg);
   background-size: cover;
@@ -324,20 +331,17 @@ nav {
     padding: 0;
     list-style: none; }
   nav li {
-    margin-bottom: 2.4rem;
-    margin-left: 1rem; }
-    @media only screen and (max-width: 62.5em) {
-      nav li {
-        padding-top: 3rem; } }
+    padding: 2.4rem; }
+  nav li:hover {
+    background-color: #72d3be; }
   nav a {
     color: white;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-transform: uppercase;
     opacity: 0;
-    transition: opacity 150ms ease-in-out; }
-  nav a:hover {
-    color: #daeeee; }
+    transition: opacity 150ms ease-in-out;
+    letter-spacing: 1px; }
 
 @media screen and (min-width: 1000px) {
   .nav-toggle-label {
@@ -345,11 +349,11 @@ nav {
   .navigation {
     display: grid;
     grid-template-columns: 1fr auto minmax(70px, 3fr);
-    padding: 2rem 4rem 2rem 2rem; }
+    padding: 2rem 5rem 2rem 0; }
   .header__logo {
     position: absolute;
-    top: 1rem;
-    left: 2.4rem; }
+    left: 2.4rem;
+    top: .5rem; }
   nav {
     /* Edge support */
     position: relative;
@@ -368,7 +372,10 @@ nav {
       display: flex; }
     nav li {
       margin-left: 6rem;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      padding: 0; }
+    nav li:hover {
+      background-color: rgba(255, 255, 255, 0); }
     nav a {
       opacity: 1;
       position: relative; }
@@ -476,19 +483,19 @@ nav {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  margin-bottom: 5rem; }
+  padding-bottom: 5vh; }
 
 #products-header {
   text-align: center;
-  margin: 8rem auto 0 auto;
+  margin: 10rem auto 0 auto;
   grid-column: full-start / full-end;
   font-size: 5rem; }
 
 .products {
   grid-column: full-start / full-end;
-  margin: 15vh 18vw;
+  margin: 15vh 22vw;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 20rem; }
 
 .product {
@@ -552,7 +559,7 @@ nav {
 .nav {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-gap: 1rem;
   align-items: center; }
   .nav__link:link, .nav__link:visited {
@@ -578,7 +585,6 @@ nav {
   text-align: center;
   width: 70%; }
 
-/* Animations */
 @keyframes moveInBottom {
   0% {
     opacity: 0;
@@ -609,7 +615,11 @@ nav {
 
 /* SLIDER */
 .section--3 {
-  margin-top: 20rem; }
+  margin-top: 15rem; }
+
+.section--3 .slider {
+  height: 42vh;
+  width: 85vw; }
 
 .slider {
   max-width: 100rem;
@@ -899,3 +909,34 @@ section .content p {
   font-size: 4rem;
   line-height: 1.3;
   font-weight: 500; }
+
+.header-4 {
+  grid-column: full-start / full-end 6;
+  background-image: linear-gradient(rgba(53, 61, 75, 0.85), rgba(53, 61, 75, 0.85)), url(../img/trees.JPG);
+  background-size: cover;
+  background-position: center; }
+  .header-4 h1 {
+    padding: 0 8rem; }
+
+.sustainable__images {
+  display: flex;
+  margin: 0 14vw; }
+
+.earth {
+  height: auto;
+  width: 25vw;
+  max-width: 300px;
+  margin: auto;
+  display: inline-flex;
+  justify-content: center; }
+
+.mission {
+  text-align: center;
+  width: 100vw; }
+
+.mission p {
+  padding: 5vh 20vw;
+  font-size: 1.6rem; }
+
+.mission p:last-child {
+  margin-bottom: 10vh; }

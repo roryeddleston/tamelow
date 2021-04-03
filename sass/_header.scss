@@ -1,5 +1,4 @@
 .header {
-    background-color: $color-grey-dark-1;
     grid-column: full-start / full-end 6;
     background-image: linear-gradient($color-secondary, $color-secondary), url(../img/hero.jpeg);
     background-size: cover;
@@ -17,7 +16,7 @@
     padding: 8rem;
     margin-top: 20vh;
     margin-left: 5vw;
-    
+
     @media only screen and (max-width: $bp-large) {
       margin-top: 15vh;
   }
@@ -36,7 +35,6 @@
 }
 
 .navigation {
-    // background-color: $color-primary;
     background-image: linear-gradient($color-primary, $color-primary), url(../img/mountain.jpg);
     text-align: center;
     position: fixed;
@@ -59,9 +57,8 @@
       display: flex;
       align-items: center;
     }
-
   }
-  
+
   .nav-toggle-label span,
   .nav-toggle-label span::before,
   .nav-toggle-label span::after {
@@ -72,25 +69,25 @@
     border-radius: 2px;
     position: relative;
   }
-  
+
   .nav-toggle-label span::before,
   .nav-toggle-label span::after {
     content: '';
     position: absolute;
   }
-  
+
   .nav-toggle-label span::before {
     bottom: 12px;
   }
-  
+
   .nav-toggle-label span::after {
     top: 12px;
   }
-  
+
   .nav-toggle:checked ~ nav {
     transform: scale(1,1);
   }
-  
+
   .nav-toggle:checked ~ nav a {
     opacity: 1;
     transition: opacity 250ms ease-in-out 250ms;
@@ -101,14 +98,12 @@
     text-align: center;
     top: 100%;
     left: 0;
-    // background-color: $color-primary;
     background-image: linear-gradient($color-primary, $color-primary), url(../img/mountain.jpg);
     background-position: center;
     width: 100%;
     transform: scale(1, 0);
     transform-origin: top;
     transition: transform 400ms ease-in-out;
-
 
     & ul {
       margin: 0;
@@ -117,47 +112,41 @@
     }
 
     & li {
-      margin-bottom: 2.4rem;
-      margin-left: 1rem;
+      padding: 2.4rem;
 
-      @media only screen and (max-width: $bp-large) {
-        padding-top: 3rem
     }
+    & li:hover {
+      background-color: $color-primary-light;
     }
 
     & a {
       color: white;
       text-decoration: none;
-      font-size: 2rem;
+      font-size: 1.7rem;
       text-transform: uppercase;
       opacity: 0;
       transition: opacity 150ms ease-in-out;
-    }
-    & a:hover {
-      color: rgb(218, 238, 238);
+      letter-spacing: 1px;
     }
   }
-  
 
-  
-  
   @media screen and (min-width: 1000px) {
     .nav-toggle-label {
       display: none;
     }
-  
+
     .navigation {
       display: grid;
       grid-template-columns: 1fr auto minmax(70px, 3fr) ;
-      padding: 2rem 4rem 2rem 2rem;
+      padding: 2rem 5rem 2rem 0;
     }
-    
+
     .header__logo {
       position: absolute;
-      top: 1rem;
       left: 2.4rem;
+      top: .5rem;
     }
-    
+
     nav {
     /* Edge support */
       position: relative;
@@ -168,21 +157,23 @@
       top: initial;
       left: initial;
       /* end Edge support  */
-      
+
       grid-column: 3 / 4;
       display: flex;
       justify-content: flex-end;
       align-items: center;
 
-
       & ul {
         display: flex;
       }
 
-
       & li {
         margin-left: 6rem;
         margin-bottom: 0;
+        padding: 0;
+      }
+      & li:hover {
+        background-color: rgba(255, 255, 255, 0);
       }
 
       & a {
@@ -190,9 +181,7 @@
         position: relative;
       }
     }
-    
-    
-    
+
     nav a::before {
       content: '';
       display: block;
@@ -205,17 +194,17 @@
       transform: scale(0, 1);
       transition: transform ease-in-out 450ms;
     }
-    
+
     nav a:hover::before {
       transform: scale(1,1);
     }
   }
-  
+
 
   /* Animations */
 
 .btn--animated {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards;
-} 
+}
 

@@ -15,7 +15,7 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    margin-bottom: 5vh;
+    padding-bottom: 5vh;
 }
 
 // products
@@ -29,10 +29,9 @@
 
 .products {
     grid-column: full-start / full-end;
-    margin: 15vh 18vw;
-
+    margin: 15vh 22vw;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 20rem;
 }
 
@@ -87,10 +86,8 @@
     &__rooms,
     &__area,
     &__price {
-
         font-size: 1.5rem;
         margin-left: 2rem;
-
         display: flex;
         align-items: center;
 

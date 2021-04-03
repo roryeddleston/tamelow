@@ -1,11 +1,11 @@
 
-  
+
   /* -------------------------- */
   /* CLASSES TO MAKE MODAL WORK */
   .hidden {
     display: none;
   }
-  
+
   .modal {
     position: absolute;
     top: 40%;
@@ -14,14 +14,14 @@
     width: 65vw;
     max-width: 800px;
     min-width: 540px;
-    
+
     background-color: white;
     padding: 6rem;
     border-radius: 5px;
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
     z-index: 30;
   }
-  
+
   .close-modal {
     position: absolute;
     top: 1.2rem;
@@ -32,7 +32,7 @@
     border: none;
     background: none;
   }
-  
+
   .overlay {
     position: absolute;
     top: 0;
@@ -106,7 +106,7 @@
     &__radio-input {
         display: none;
     }
-    
+
     &__radio-label {
         cursor: pointer;
         position: relative;

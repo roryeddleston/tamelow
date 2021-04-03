@@ -1,0 +1,42 @@
+
+
+.header-4 {
+    // background-color: $color-grey-dark;
+    grid-column: full-start / full-end 6;
+    background-image: linear-gradient($color-secondary, $color-secondary), url(../img/trees.JPG);
+    background-size: cover;
+    background-position: center;
+    & h1 {
+        padding: 0 8rem;
+    }
+}
+
+.sustainable__images {
+    display: flex;
+    margin: 0 14vw;
+}
+
+.earth {
+    height: auto;
+    width: 25vw;
+    max-width: 300px;
+    margin: auto;
+    display: inline-flex;
+    justify-content: center;
+
+}
+
+.mission {
+    text-align: center;
+    width: 100vw;
+}
+
+.mission p {
+
+    padding: 5vh 20vw;
+    font-size: 1.6rem;
+}
+
+.mission p:last-child {
+    margin-bottom: 10vh;
+}
