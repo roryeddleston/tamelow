@@ -1,6 +1,6 @@
 .features {
     grid-column: center-start / center-end;
-    margin: 8vh 1vw 10vh 1vw;
+    margin: 12vh 1vw 10vh 1vw;
 
     @supports(display: grid) {
         display: grid;
