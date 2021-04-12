@@ -2,17 +2,14 @@
 /* SIGNUP */
 .section--sign-up {
     background-color: #37383d;
-    // border-bottom: 1px solid #444;
     text-align: center;
-
     grid-column: full-start / full-end 6;
     padding: 6vh;
     height: 400px;
     margin-bottom: 15vh;
     @media only screen and (max-width: $bp-large) {
       padding: 15vh 5vw;
-  }
-
+    }
   }
   
   .section--sign-up .section__header {
@@ -66,7 +63,6 @@
     max-width: 80rem;
     margin: 0 auto;
   }
-  
   
   .section__header {
     font-size: 4rem;

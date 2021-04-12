@@ -3,10 +3,10 @@
   display: flex;
 }
 
-::selection{
+::selection {
     background: rgba(23,162,184,0.3);
   }
-  .wrapper{
+  .wrapper {
     width: 60vw;
     max-width: 1200px;
     // width: 100vw;
@@ -16,25 +16,22 @@
     background: #fff;
     box-shadow: 0px 10px 15px rgba(0,0,0,0.2);
 
-
     @media only screen and (max-width: $bp-large) {
       min-width: 80vw;
-  }
-
+    }
   }
   
-  .wrapper .nav2{
+  .wrapper .nav2 {
     position: relative;
     width: 80%;
     height: 5vh;
     display: flex;
     align-items: center;
     margin: 3vh 0;
-
   }
 
 
-  .wrapper .nav2 label{
+  .wrapper .nav2 label {
     display: block;
     height: 90%;
     width: 90%;
@@ -58,7 +55,7 @@
     color: #fff;
   }
 
-  .nav2 .slider{
+  .nav2 .slider {
     position: absolute;
     height: 100%;
     width: 20%;
@@ -69,7 +66,7 @@
     background: $color-primary;
     transition: all 0.5s ease;
   }
-  input[type="radio"]{
+  input[type="radio"] {
     display: none;
   }
   #impact:checked ~ .nav2 .slider{
@@ -84,7 +81,7 @@
   #about:checked ~ .nav2 .slider{
     left: 80%;
   }
-  section .content{
+  section .content {
     display: none;
     background: #fff;
   }
@@ -95,12 +92,12 @@
   #about:checked ~ section .content-5{
     display: block;
   }
-  section .content .title{
+  section .content .title {
     font-size: 3rem;
     font-weight: 500;
     margin: 2vh 0 1vh 0;
   }
-  section .content p{
+  section .content p {
   text-align: justify;
   font-size: 2rem;
   }

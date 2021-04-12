@@ -68,12 +68,7 @@ body {
 
     @media only screen and (max-width: $bp-large) {
         grid-template-rows: minmax(80vh, min-content) min-content min-content min-content min-content min-content;
-
     }
-
-    // @media only screen and (max-width: $bp-medium) {
-    //     grid-template-rows: 6rem calc(100vh - 6rem);
-    // }
 }
 
 .container-2 {
@@ -83,15 +78,13 @@ body {
 
     @media only screen and (max-width: $bp-large) {
         grid-template-rows: minmax(80vh, min-content) min-content min-content min-content min-content min-content;
-
     }
-
 }
 
 .section--hidden {
     opacity: 0;
     transform: translateY(8rem);
   }
-  .section {
+.section {
     transition: transform 1s, opacity 1s;
   }

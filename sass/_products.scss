@@ -1,5 +1,3 @@
-// heading 2
-
 .header-2 {
     background-color: $color-grey-dark-1;
     grid-column: full-start / full-end 6;
@@ -8,8 +6,6 @@
     background-position: center;
 }
 
-// image slider
-
 .header__hero-2 {
     display: flex;
     justify-content: center;
@@ -17,8 +13,6 @@
     text-align: center;
     padding-bottom: 5vh;
 }
-
-// products
 
 #products-header {
   text-align: center;
